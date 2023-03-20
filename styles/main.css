@@ -240,6 +240,22 @@ footer p {
 }
 /* i need text to be underneath the pictures.. */
 
+header ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+
+header nav a {
+  position: relative;
+  text-transform: uppercase;
+  padding: 1rem;
+  display: inline-block;
+}
+
 .marginer {
   margin-bottom: 6rem;
 }
