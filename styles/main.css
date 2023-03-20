@@ -1,0 +1,256 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+
+:root {
+  --color-font: #5a5a5a;
+  --color-primary: #401020; /* Purpley blue */
+  --color-secondary: #c55050; /* Dark Salmon */
+  --color-accent: #a96544; /* Wet Sand */
+  --color-accent-light: #f59c4d; /* Burnt Orange */
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--color-font);
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  color: var(--color-accent-light);
+  font-size: 3.5rem;
+  padding-bottom: 2rem;
+  text-shadow: 2px 2px 2px #0005;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  color: var(--color-secondary);
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+a[href]:hover {
+  color: var(--color-accent-light);
+}
+
+.button {
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  padding: 0.5rem 1rem;
+  transition: background-color 450ms ease-in-out, color 450ms ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 8rem;
+}
+
+.button:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+a.button:hover {
+  color: white;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 75rem;
+  padding: 0 1rem;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 50rem;
+}
+p {
+  margin-bottom: 1.5rem;
+}
+
+article,
+aside {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 50rem;
+}
+
+footer {
+  background-color: var(--color-primary);
+}
+
+footer p {
+  color: white;
+  margin: 0;
+  padding: 3rem 1rem 6rem;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to top, #0006, transparent 50%);
+}
+
+.img1 {
+  filter: brightness(60%);
+}
+
+.hero .headsub {
+  position: absolute;
+  inset: 0;
+  color: var(--color-accent-light);
+  text-align: center;
+  text-shadow: 2px 2px 2px #0005;
+}
+
+.hero p {
+  font-size: clamp(1rem, 7vw, 3rem);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 7vw, 7rem);
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.cards {
+  display: flex;
+  /* align-items: flex-end; */
+  flex: 1 1 0;
+  gap: 1rem;
+  margin: 0 1rem 8rem;
+  transition: box-shadow 300ms ease;
+}
+
+.cards h3 {
+  position: relative;
+  inset: 0;
+  text-align: center;
+}
+/* i need text to be underneath the pictures.. */
+
+.marginer {
+  margin-bottom: 6rem;
+}
+
+.card {
+  overflow: hidden;
+  transition: box-shadow 300ms ease;
+}
+
+.card img {
+  transition: transform 600ms ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+
+.card .imagewrapper {
+  overflow: hidden;
+}
