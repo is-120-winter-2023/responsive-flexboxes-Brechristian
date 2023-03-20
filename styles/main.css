@@ -94,6 +94,9 @@ img[src$="svg"] {
 body {
   font-family: "Source Sans Pro", sans-serif;
   color: var(--color-font);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 h1 {
@@ -151,7 +154,7 @@ p {
 }
 
 main {
-  margin: 0 auto;
+  align-self: center;
   padding: 0 1rem;
   max-width: 50rem;
 }
@@ -161,7 +164,7 @@ p {
 
 article,
 aside {
-  margin: 0 auto;
+  align-self: center;
   padding: 0 1rem;
   max-width: 50rem;
 }
@@ -197,6 +200,9 @@ footer p {
   color: var(--color-accent-light);
   text-align: center;
   text-shadow: 2px 2px 2px #0005;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
 }
 
 .hero p {
