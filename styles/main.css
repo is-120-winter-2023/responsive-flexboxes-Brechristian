@@ -276,3 +276,31 @@ header nav a {
 .card .imagewrapper {
   overflow: hidden;
 }
+
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel .img-wrapper {
+  order: -1;
+}
+
+@media (min-width: 500px) {
+  .panel {
+    flex-direction: row;
+  }
+
+  .panel h2 {
+    margin: 0;
+  }
+
+  .panel .text-wrapper {
+    flex: 1 1 40%;
+  }
+
+  .panel .img-wrapper {
+    order: 0;
+    flex: 1 1 60%;
+  }
+}
