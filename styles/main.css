@@ -288,7 +288,7 @@ header nav a {
 
 @media (min-width: 500px) {
   .panel {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .panel h2 {
