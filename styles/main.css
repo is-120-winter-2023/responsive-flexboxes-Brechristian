@@ -202,11 +202,11 @@ footer p {
   text-shadow: 2px 2px 2px #0005;
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: clamp(5rem, 7vw, 10rem);
 }
 
 .hero p {
-  font-size: clamp(1rem, 7vw, 3rem);
+  font-size: clamp(2rem, 7vw, 1rem);
 }
 
 .hero h1 {
