@@ -181,6 +181,7 @@ footer p {
 
 .hero {
   position: relative;
+  order: -1;
 }
 
 .hero::before {
@@ -204,11 +205,43 @@ footer p {
   flex-direction: column;
   margin-top: clamp(5rem, 7vw, 10rem);
 }
+
 nav {
   visibility: hidden;
 }
 
+header ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+header nav a {
+  position: relative;
+  text-transform: uppercase;
+  padding: 1rem;
+  display: inline-block;
+}
+.hero .headsub {
+  position: absolute;
+  inset: 0;
+  color: var(--color-accent-light);
+  text-align: center;
+  text-shadow: 2px 2px 2px #0005;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(5rem, 7vw, 10rem);
+}
+
 .close nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
   align-items: center;
   inset: 0;
@@ -216,6 +249,7 @@ nav {
   background-color: purple;
   visibility: visible;
   padding-bottom: 2rem;
+  z-index: 1;
 }
 
 .close header ul {
@@ -323,9 +357,6 @@ nav {
 }
 
 /* JavaScript toggles a "close" class on the <nav> when the menu-icon is clicked */
-.close nav {
-  display: block;
-}
 
 .close line:first-child {
   transform: rotate(135deg);
@@ -337,7 +368,7 @@ nav {
 
 @media (min-width: 500px) {
   .panel {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
   }
 
@@ -369,30 +400,16 @@ nav {
 }
 
 @media (min-width: 601px) {
-  header ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-    padding: 0;
-    list-style-type: none;
-    font-size: 1.5rem;
+  header nav {
+    visibility: visible;
   }
 
-  header nav a {
-    position: relative;
-    text-transform: uppercase;
-    padding: 1rem;
-    display: inline-block;
+  .hero {
+    order: 0;
   }
-  .hero .headsub {
-    position: absolute;
-    inset: 0;
-    color: var(--color-accent-light);
-    text-align: center;
-    text-shadow: 2px 2px 2px #0005;
-    display: flex;
-    flex-direction: column;
-    margin-top: clamp(5rem, 7vw, 10rem);
+  header ul {
+    margin: 2rem;
+    flex-direction: row;
   }
 
   .menu-icon {
