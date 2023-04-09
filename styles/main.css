@@ -111,6 +111,7 @@ h2 {
   font-family: "Oswald", sans-serif;
   color: var(--color-secondary);
   font-size: 2.5rem;
+  margin-top: 3rem;
 }
 
 h3 {
@@ -316,6 +317,9 @@ header nav a {
   order: -1;
 }
 
+.first {
+  margin-bottom: 5rem;
+}
 /* default menu icon on mobile is a fixed round icon in the top left of the viewport */
 .menu-icon {
   position: fixed;
