@@ -359,6 +359,17 @@ header nav a {
   transform: rotate(-135deg);
 }
 
+pre {
+  display: block;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  border-radius: 5px;
+}
+
 @media (min-width: 500px) {
   .panel {
     flex-direction: row;
